@@ -302,7 +302,7 @@ h3.spec {
 	width: 100%;
 	height: 100%;
 	background: #26292E;
-	opacity: 0.7;
+	opacity: 0.2;
 	filter: alpha(opacity=70);
 	z-index: 0;
 }
@@ -628,14 +628,14 @@ nav#menu #menu-nav li a:hover {
 ================================================== */
 
 .page {
-	background: #2F3238;
+	//background: #2F3238; //COMENTADO HERNAN
 	padding: 100px 0;
 	position: relative;
 	z-index: 99;
 }
 
 .page-alternate {
-	background: #26292E;
+	//background: #26292E; //COMENTADO HERNAN
 	padding: 100px 0;
 	position: relative;
 	z-index: 99;
@@ -934,7 +934,9 @@ nav#menu #menu-nav li a:hover {
 	-moz-box-shadow: none;
 	box-shadow: none;
 	
-	background: #26292E;
+	//background: #26292E;		//nuevo hernan
+	background: black;	//nuevo hernan
+    opacity: 0.5;				//nuevo hernan
     color: #FFFFFF;
     font-size: 16px;
     height: auto;
@@ -960,7 +962,9 @@ nav#menu #menu-nav li a:hover {
 }
 
 #contact-form .submit {
-    background: #3C3F45;
+    //background: #3C3F45;	//nuevo hernan
+    background: black;		//nuevo hernan
+    opacity: 0.5;			//nuevo hernan
     color: #23262C;
     cursor: pointer;
     display: inline-block;
