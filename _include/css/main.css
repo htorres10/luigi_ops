@@ -25,7 +25,7 @@ html, hmtl a{
 
 body{
 	background:#2F3238;
-	color:#7F8289;
+	color:#EEE;
 	font-weight:300;
 	font-size:16px;
 	font-family: 'Titillium Web', sans-serif;
@@ -34,7 +34,7 @@ body{
 
 
 a{
-	color:#DE5E60;
+	color:#F2F2F2;
 	text-decoration: none;
 	cursor: pointer;
 	
@@ -686,7 +686,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .work-nav #filters li a {
-	color: #7F8289;
+	color: #EEE;
 	font-size: 16px;
 	display: block;	
 }
