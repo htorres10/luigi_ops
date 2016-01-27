@@ -662,7 +662,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 /* ==================================================
-   Section Portfolio
+   Section Fatto
 ================================================== */
 
 .type-work {
@@ -775,6 +775,44 @@ nav#menu #menu-nav li a:hover {
 	
 	opacity: 1;
 	filter: alpha(opacity=100);
+}
+
+/* ==================================================
+   Section Fatto
+================================================== */
+
+.type-zapatos {
+	color: #FFFFFF;
+	font-size: 24px;
+	font-weight: 300;
+	margin-bottom: 30px;
+	line-height: 1em;
+	text-transform: uppercase;
+}
+
+.zapatos-nav #filterszapatos {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.zapatos-nav #filterszapatos li {
+	margin: 0 0 30px 0;
+	padding: 0;
+}
+
+.zapatos-nav #filterszapatos li a {
+	color: #EEE;
+	font-size: 16px;
+	display: block;	
+}
+
+.zapatos-nav #filterszapatos li a:hover {
+	color: #FFFFFF;
+}
+
+.zapatos-nav #filterszapatos li a.selected {
+	color: #DE5E60;
 }
 
 

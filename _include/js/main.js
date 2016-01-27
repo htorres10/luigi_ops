@@ -152,6 +152,57 @@ BRUSHED.filter = function (){
 	}
 }
 
+/* ==================================================
+   Filter Zapatos
+================================================== */
+
+BRUSHED.filterZapatos = function (){
+	if($('#projectsZapatos').length > 0){		
+		var $container = $('#projectsZapatos');
+		
+		$container.imagesLoaded(function() {
+			$container.isotope({
+			  // options
+			  animationEngine: 'best-available',
+			  itemSelector : '.item-thumbs',
+			  layoutMode : 'fitRows'
+			});
+		});
+	
+		// filter items when filter link is clicked
+		var $optionSets = $('#optionsZap .option-set'),
+			$optionLinks = $optionSets.find('a');
+	
+		  $optionLinks.click(function(){
+			var $this = $(this);
+			// don't proceed if already selected
+			if ( $this.hasClass('selected') ) {
+			  return false;
+			}
+			var $optionSet = $this.parents('.option-set');
+			$optionSet.find('.selected').removeClass('selected');
+			$this.addClass('selected');
+	  
+			// make option object dynamically, i.e. { filter: '.my-filter-class' }
+			var options = {},
+				key = $optionSet.attr('data-option-key'),
+				value = $this.attr('data-option-value');
+			// parse 'false' as false boolean
+			value = value === 'false' ? false : value;
+			options[ key ] = value;
+			if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+			  // changes in layout modes need extra logic
+			  changeLayoutMode( $this, options )
+			} else {
+			  // otherwise, apply new options
+			  $container.isotope( options );
+			}
+			
+			return false;
+		});
+	}
+}
+
 
 /* ==================================================
    FancyBox
@@ -436,6 +487,7 @@ $(document).ready(function(){
 	BRUSHED.goSection();
 	BRUSHED.goUp();
 	BRUSHED.filter();
+	BRUSHED.filterZapatos();
 	BRUSHED.fancyBox();
 	BRUSHED.contactForm();
 	BRUSHED.tweetFeed();

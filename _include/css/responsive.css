@@ -304,7 +304,7 @@
 		font-size: 13px;
 		text-transform: uppercase;	
 	}
-	
+
 	#about .profile {
 		margin-bottom: 30px;	
 	}
@@ -379,7 +379,7 @@
 	.work-nav #filters li a {
 		font-size: 12px;
 	}
-	
+
 	#twitter-feed {
 		padding-top: 90px;
 		padding-bottom: 120px;	
@@ -409,6 +409,7 @@
 			background-image: url(../img/filter-icon_@2x.png);
 			background-size: 16px 16px;
 		}
+
 	}
 
 
