@@ -551,7 +551,7 @@ $(document).ready(function(){
 	BRUSHED.toggle();
 	BRUSHED.toolTip();
 
-    $("input ,#contact_name, #contact_email, #contact_message, #contact_phone").mouseleave(function() {
+    $("input ,#contact_name, #contact_email, #contact_message, #contact_phone").focusout(function() {
     	if($(this).val()==""){
     		$(this).css({ 'background-color': 'black' });	
     		return;
