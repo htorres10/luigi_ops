@@ -550,6 +550,17 @@ $(document).ready(function(){
 	BRUSHED.accordion();
 	BRUSHED.toggle();
 	BRUSHED.toolTip();
+
+    $("input ,#contact_name, #contact_email, #contact_message, #contact_phone").mouseleave(function() {
+    	if($(this).val()==""){
+    		$(this).css({ 'background-color': 'black' });	
+    		return;
+    	};
+	  	if($(this).attr('placeholder')!=$(this).val()){
+			$(this).css({ 'background-color': '#9EA07F' });	
+	  	};
+	});
+
 });
 
 $(window).resize(function(){
