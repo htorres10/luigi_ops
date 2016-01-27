@@ -209,7 +209,7 @@ BRUSHED.filterZapatos = function (){
    Filter Accesorios
 ================================================== */
 
-BRUSHED.filter = function (){
+BRUSHED.filteracc = function (){
 	if($('#projectsacc').length > 0){		
 		var $container = $('#projectsacc');
 		
@@ -541,6 +541,7 @@ $(document).ready(function(){
 	BRUSHED.goUp();
 	BRUSHED.filter();
 	BRUSHED.filterZapatos();
+	BRUSHED.filteracc();
 	BRUSHED.fancyBox();
 	BRUSHED.contactForm();
 	BRUSHED.tweetFeed();
