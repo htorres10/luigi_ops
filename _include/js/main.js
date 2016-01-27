@@ -54,7 +54,7 @@ BRUSHED.slider = function(){
 		start_slide             :   1,			// Start slide (0 is random)
 		stop_loop				:	0,			// Pauses slideshow on last slide
 		random					: 	0,			// Randomize slide order (Ignores start slide)
-		slide_interval          :   12000,		// Length between transitions
+		slide_interval          :   6000,		// Length between transitions
 		transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
 		transition_speed		:	300,		// Speed of transition
 		new_window				:	1,			// Image links open in new window/tab
@@ -79,7 +79,9 @@ BRUSHED.slider = function(){
 		slides 					:  	[			// Slideshow Images
 											{image : '_include/img/slider-images/image01.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
 											{image : '_include/img/slider-images/image02.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image03.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''}  
+											{image : '_include/img/slider-images/image03.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
+											{image : '_include/img/slider-images/image04.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
+											{image : '_include/img/slider-images/image05.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''}  
 									],
 									
 		// Theme Options			   
@@ -203,6 +205,56 @@ BRUSHED.filterZapatos = function (){
 	}
 }
 
+/* ==================================================
+   Filter Accesorios
+================================================== */
+
+BRUSHED.filterZapatos = function (){
+	if($('#projectsacc').length > 0){		
+		var $container = $('#projectsacc');
+		
+		$container.imagesLoaded(function() {
+			$container.isotope({
+			  // options
+			  animationEngine: 'best-available',
+			  itemSelector : '.item-thumbs',
+			  layoutMode : 'fitRows'
+			});
+		});
+	
+		// filter items when filter link is clicked
+		var $optionSets = $('#optionsacc .option-set'),
+			$optionLinks = $optionSets.find('a');
+	
+		  $optionLinks.click(function(){
+			var $this = $(this);
+			// don't proceed if already selected
+			if ( $this.hasClass('selected') ) {
+			  return false;
+			}
+			var $optionSet = $this.parents('.option-set');
+			$optionSet.find('.selected').removeClass('selected');
+			$this.addClass('selected');
+	  
+			// make option object dynamically, i.e. { filter: '.my-filter-class' }
+			var options = {},
+				key = $optionSet.attr('data-option-key'),
+				value = $this.attr('data-option-value');
+			// parse 'false' as false boolean
+			value = value === 'false' ? false : value;
+			options[ key ] = value;
+			if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+			  // changes in layout modes need extra logic
+			  changeLayoutMode( $this, options )
+			} else {
+			  // otherwise, apply new options
+			  $container.isotope( options );
+			}
+			
+			return false;
+		});
+	}
+}
 
 /* ==================================================
    FancyBox
@@ -214,8 +266,8 @@ BRUSHED.fancyBox = function(){
 		$(".fancybox").fancybox({				
 				padding : 0,
 				beforeShow: function () {
-					this.title = $(this.element).attr('title');
-					this.title = '<h4>' + this.title + '</h4>' + '<p>' + $(this.element).parent().find('img').attr('alt') + '</p>';
+					//Saque por falta de informacion//this.title = $(this.element).attr('title');
+					//Saque por falta de informacion//this.title = '<h4>' + this.title + '</h4>' + '<p>' + $(this.element).parent().find('img').attr('alt') + '</p>';
 				},
 				helpers : {
 					title : { type: 'inside' },
