@@ -1239,6 +1239,13 @@ footer .credits {
    Preloader
 ================================================== */
 
+#custom-style{
+	top: -20%;
+	position: relative;
+	left: -74%;
+}
+
+
 #jpreOverlay,
 #jSplash {
 	background-color: #2F3238;
