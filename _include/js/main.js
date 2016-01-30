@@ -78,7 +78,6 @@ BRUSHED.slider = function(){
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
 											{image : '_include/img/slider-images/Image01.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image02.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
 											{image : '_include/img/slider-images/image03.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
 											{image : '_include/img/slider-images/image04.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
 											{image : '_include/img/slider-images/image05.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''}    
@@ -268,7 +267,7 @@ BRUSHED.fancyBox = function(){
 				padding : 0,
 				beforeShow: function () {
 					this.title = $(this.element).attr('title');
-					//this.title = '<h4>' + this.title + '</h4>' + '<p>' + $(this.element).parent().find('img').attr('alt') + '</p>';
+					this.title = '<h4>' + this.title + '</h4>' + '<p>' + $(this.element).parent().find('img').attr('alt') + '</p>';
 				},
 				helpers : {
 					title : { type: 'inside' },
