@@ -504,7 +504,7 @@ BRUSHED.toolTip = function(){
 BRUSHED.slider();
 
 $(document).ready(function(){
-	Modernizr.load([
+/*	Modernizr.load([
 	{
 		test: Modernizr.placeholder,
 		nope: '_include/js/placeholder.js', 
@@ -520,7 +520,7 @@ $(document).ready(function(){
 		}
 	}
 	]);
-	
+*/	
 	// Preload the page with jPreLoader
 	$('body').jpreLoader({
 		splashID: "#jSplash",
@@ -529,6 +529,7 @@ $(document).ready(function(){
 		autoClose: true,
 		splashFunction: function() {
 			$('#circle').delay(250).animate({'opacity' : 1}, 500, 'linear');
+			$('#slogan').append('65°aniversario');
 		}
 	});
 	
@@ -559,6 +560,11 @@ $(document).ready(function(){
 			$(this).css({ 'background-color': '#9EA07F' });	
 	  	};
 	});
+
+	$('ul li a').click(function(e) { 
+    	//alert('hola');
+    	console.log( "You clicked a paragraph!" );
+    });
 
 });
 
