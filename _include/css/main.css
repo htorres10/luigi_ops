@@ -142,12 +142,19 @@ textarea::-webkit-input-placeholder {
    Idioma
 ================================================== */
 
-#lanEs:hover{
-
+#lanEs,
+#lanEn
+		{
+	background: rgba(255, 0, 0, 0);
+	selected
 }
 
-#lanEn{
+#lanEs:hover :active{
+	color: #DE5E60;
+}
 
+#lanEn:hover{
+	color: #DE5E60;
 }
 
 
@@ -1483,8 +1490,4 @@ footer .credits {
     float: left;
     list-style: none;
     font-size: 20px;
-}
-
-#menu-idiomas li a:hover{
-	background: red;
 }
