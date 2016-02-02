@@ -65,120 +65,12 @@
 </script>
 <!-- End Analytics -->
 
-<script type="text/javascript" src="_include/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="_include/js/jssor.slider.mini.js"></script>
-    <!-- use jssor.slider.debug.js instead for debug -->
-    <script>
-        jQuery(document).ready(function ($) {
-            
-            var jssor_1_options = {
-              $AutoPlay: true,
-              $AutoPlaySteps: 4,
-              $SlideDuration: 160,
-              $SlideWidth: 200,
-              $SlideSpacing: 5,
-              $Cols: 4,
-              $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$,
-                $Steps: 4
-              },
-              $BulletNavigatorOptions: {
-                $Class: $JssorBulletNavigator$,
-                $SpacingX: 1,
-                $SpacingY: 1
-              }
-            };
-            
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-            
-            //responsive code begin
-            //you can remove responsive code if you don't want the slider scales while window resizing
-            function ScaleSlider() {
-                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-                if (refSize) {
-                    refSize = Math.min(refSize, 1200);
-                    jssor_1_slider.$ScaleWidth(refSize);
-                }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
-            }
-            ScaleSlider();
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
-            //responsive code end
-        });
-    </script>
-
-    <style>
-        
-        /* jssor slider bullet navigator skin 03 css */
-        /*
-        .jssorb03 div           (normal)
-        .jssorb03 div:hover     (normal mouseover)
-        .jssorb03 .av           (active)
-        .jssorb03 .av:hover     (active mouseover)
-        .jssorb03 .dn           (mousedown)
-        */
-        .jssorb03 {
-            position: absolute;
-        }
-        .jssorb03 div, .jssorb03 div:hover, .jssorb03 .av {
-            position: absolute;
-            /* size of bullet elment */
-            width: 21px;
-            height: 21px;
-            text-align: center;
-            line-height: 21px;
-            color: white;
-            font-size: 12px;
-            background: url(_include/img/prensa/b03.png') no-repeat;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        .jssorb03 div { background-position: -5px -4px; }
-        .jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -4px; }
-        .jssorb03 .av { background-position: -65px -4px; }
-        .jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -4px; }
-
-        /* jssor slider arrow navigator skin 03 css */
-        /*
-        .jssora03l                  (normal)
-        .jssora03r                  (normal)
-        .jssora03l:hover            (normal mouseover)
-        .jssora03r:hover            (normal mouseover)
-        .jssora03l.jssora03ldn      (mousedown)
-        .jssora03r.jssora03rdn      (mousedown)
-        */
-        .jssora03l, .jssora03r {
-            display: block;
-            position: absolute;
-            /* size of arrow element */
-            width: 55px;
-            height: 55px;
-            cursor: pointer;
-            background: url('_include/img/prensa/a03.png') no-repeat;
-            overflow: hidden;
-        }
-        .jssora03l { background-position: -3px -33px; }
-        .jssora03r { background-position: -63px -33px; }
-        .jssora03l:hover { background-position: -123px -33px; }
-        .jssora03r:hover { background-position: -183px -33px; }
-        .jssora03l.jssora03ldn { background-position: -243px -33px; }
-        .jssora03r.jssora03rdn { background-position: -303px -33px; }
-    </style>
-
-
-
-
 </head>
 
 
 <body>
 
 
-<<<<<<< HEAD
 <!-- This section is for Splash Screen -->
 <div class="ole">
 <section id="jSplash">
@@ -187,46 +79,22 @@
     <div id="circle"></div>
     </br></br></br>
     <div id="slogan"></div>
-=======
-
-<!-- This section is for Splash Screen -->
-<div class="ole">
-<section id="jSplash">
-<img span class="custom-style" src="_include/img/splash/logo.png"></img>
-
-<div  position:absolute">
-<div id="circle">9999999999999999999999999999999999</div>
-<div id="mensajesplash">65 aniversario</div>
-
-</div>
-</div>
-
-
-
-
-
-
-	
-   
->>>>>>> origin/master
 </section>
 </div>
 <!-- End of Splash Screen -->
 
-
-
 <!-- Homepage Slider -->
-<div id="home-slider">	
+<div id="home-slider">  
     <div class="overlay"></div>
     <ul id="menu-idiomas">
         <li><a href="#about" id="lanEs">Español</a></li>
         <li><a href="#about" id="lanEn">English</a></li>
     </ul>
     <div class="slider-text">
-    	<div id="slidecaption"></div>
+      <div id="slidecaption"></div>
     </div>   
-	
-	<div class="control-nav">
+  
+  <div class="control-nav">
         <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
         <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
         <ul id="slide-list"></ul>
@@ -239,19 +107,19 @@
 <!-- Header -->
 <header>
     <div class="sticky-nav">
-    	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
+      <a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
         <div id="logo">
-        	<a id="goUp" href="#home-slider" title="">Luigi De Carlo</a>
+          <a id="goUp" href="#home-slider" title="">Luigi De Carlo</a>
         </div>
         <nav id="menu">
-        	<ul id="menu-nav">
-            	<!--<li class="current"><a href="#home-slider">Home</a></li>-->
+          <ul id="menu-nav">
+              <!--<li class="current"><a href="#home-slider">Home</a></li>-->
                 <li><a href="#about" id="lanOficioSastre">Oficio de sastreria</a></li>
                 <li><a href="#work" id="lanFatto">Fatto a mano</a></li>
                 <li><a href="#zapatos" id="lanZapatos">Zapatos</a></li>
                 <li><a href="#accesorios" id="lanAccesorios">Accesorios</a></li>
                 <li><a href="#contact" id="lanContacto">Contacto</a></li>
-				<!--<li><a href="shortcodes.html" class="external">¡BORRAR!</a></li>-->
+        <!--<li><a href="shortcodes.html" class="external">¡BORRAR!</a></li>-->
             </ul>
         </nav>
     </div>
@@ -273,150 +141,6 @@ Las prendas no sólo están hechas a medida sino pensadas para las necesidades y
 
 Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo para Ud., en el que se combinan arte, buen gusto, calidad, dedicación, profesionalismo y calidez.</h3>
             </div>
-            
-            <!--/Portfolio --> 
-
-<div class="container">
-<ul class="fadeInRight animated wow">
-   <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden; visibility: hidden;">
-      <!-- Loading Screen -->
-      <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-         <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-         <div style="position:absolute;display:block;background:url('_include/img/prensa/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
-      </div>
-      <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden;">
-         
-         <div style="display: none;">
-           <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/historia/full/h01-page-001.jpg">
-             <span class="overlay-img"></span>
-              <span class="overlay-img-thumb font-icon-plus"></span></a>
-             <!-- Thumb Image and Description -->
-             <img src="_include/img/historia/thumb/h01-page-001-thumb.jpg" >
-         </div>
-         
-             <div style="display: none;">
-           <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/historia/full/h02-page-001.jpg">
-             <span class="overlay-img"></span>
-              <span class="overlay-img-thumb font-icon-plus"></span></a>
-             <!-- Thumb Image and Description -->
-          <img src="_include/img/historia/thumb/h02-page-001-thumb.jpg" >
-         </div>
-         
-         
-          <div style="display: none;">
-           <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/historia/full/h03-page-001.jpg">
-             <span class="overlay-img"></span>
-              <span class="overlay-img-thumb font-icon-plus"></span></a>
-             <!-- Thumb Image and Description -->
-              <img src="_include/img/historia/thumb/h03-page-001-thumb.jpg" >
-         </div>
-         
-            <div style="display: none;">
-           <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/historia/full/h04-page-001.jpg">
-             <span class="overlay-img"></span>
-              <span class="overlay-img-thumb font-icon-plus"></span></a>
-             <!-- Thumb Image and Description -->
-  				 <img src="_include/img/historia/thumb/h04-page-001-thumb.jpg" >
-         </div>
-         
-          <div style="display: none;">
-           <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/historia/full/h05-page-001.jpg">
-             <span class="overlay-img"></span>
-              <span class="overlay-img-thumb font-icon-plus"></span></a>
-             <!-- Thumb Image and Description -->
-            <img src="_include/img/historia/thumb/h05-page-001-thumb.jpg" >
-         </div>
-         
-             <div style="display: none;">
-           <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/historia/full/h06-page-001.jpg">
-             <span class="overlay-img"></span>
-              <span class="overlay-img-thumb font-icon-plus"></span></a>
-             <!-- Thumb Image and Description -->
-            <img src="_include/img/historia/thumb/h06-page-001-thumb.jpg" >
-         </div>
-         
-            <div style="display: none;">
-           <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/historia/full/h07-page-001.jpg">
-             <span class="overlay-img"></span>
-              <span class="overlay-img-thumb font-icon-plus"></span></a>
-             <!-- Thumb Image and Description -->
-            <img src="_include/img/historia/thumb/h07-page-001-thumb.jpg" >
-         </div>
-         
-             <div style="display: none;">
-           <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/historia/full/h08-page-001.jpg">
-             <span class="overlay-img"></span>
-              <span class="overlay-img-thumb font-icon-plus"></span></a>
-             <!-- Thumb Image and Description -->
-            <img src="_include/img/historia/thumb/h08-page-001-thumb.jpg" >
-         </div>
-         
-            <div style="display: none;">
-           <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/prensa/full/p01-page-001.jpg">
-             <span class="overlay-img"></span>
-              <span class="overlay-img-thumb font-icon-plus"></span></a>
-             <!-- Thumb Image and Description -->
-             <img src="_include/img/prensa/thumb/p01-page-001-thumb.jpg" >
-         </div>
-         
-         
-         
-              <div style="display: none;">
-           <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/prensa/full/p02-page-001.jpg">
-             <span class="overlay-img"></span>
-              <span class="overlay-img-thumb font-icon-plus"></span></a>
-             <!-- Thumb Image and Description -->
-             <img src="_include/img/prensa/thumb/p02-page-001-thumb.jpg" >
-         </div>
-         
-            <div style="display: none;">
-           <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/prensa/full/p03-page-001.jpg">
-             <span class="overlay-img"></span>
-              <span class="overlay-img-thumb font-icon-plus"></span></a>
-             <!-- Thumb Image and Description -->
-             <img src="_include/img/prensa/thumb/p03-page-001-thumb.jpg" >
-         </div>
-         
-           <div style="display: none;">
-           <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/prensa/full/p05-page-001.jpg">
-             <span class="overlay-img"></span>
-              <span class="overlay-img-thumb font-icon-plus"></span></a>
-             <!-- Thumb Image and Description -->
-             <img src="_include/img/prensa/thumb/p06-page-005-thumb.jpg">
-             
-             
-             
-         </div>
-         
-            <div style="display: none;">
-           <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/prensa/full/p06-page-001.jpg">
-             <span class="overlay-img"></span>
-              <span class="overlay-img-thumb font-icon-plus"></span></a>
-             <!-- Thumb Image and Description -->
-             <img src="_include/img/prensa/thumb/p06-page-001-thumb.jpg">
-         </div>
-         
-       
-      </div>
-      <!-- Bullet Navigator -->
-      <div data-u="navigator" class="jssorb03" style="bottom:10px;right:10px;">
-         <!-- bullet navigator item prototype -->
-         <div data-u="prototype" style="width:21px;height:21px;">
-            <div data-u="numbertemplate"></div>
-         </div>
-      </div>
-      <!-- Arrow Navigator -->
-      <span data-u="arrowleft" class="jssora03l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
-      <span data-u="arrowright" class="jssora03r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
-      <a href="http://www.dolphin-it.com.ar" style="display:none">Dolphin-IT</a>
-   </div>
-</ul>
- </div>
-
-
-<!--client_logos-->
-            
-            
         </div>
     </div>
     <!-- End Title Page -->
@@ -497,8 +221,8 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
 
 <!-- Our Work Section -->
 <div id="work" class="page">
-	<div class="container">
-    	<!-- Title Page -->
+  <div class="container">
+      <!-- Title Page -->
         <div class="row">
             <div class="span12">
                 <div class="title-page">
@@ -512,11 +236,11 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
         
         <!-- Portfolio Projects -->
         <div class="row">
-        	<div class="span3">
-            	<!-- Filter -->
+          <div class="span3">
+              <!-- Filter -->
                 <nav id="options" class="work-nav">
                     <ul id="filters" class="option-set" data-option-key="filter">
-                    	<li class="type-work">Productos</li>
+                      <li class="type-work">Productos</li>
                         <li><a href="#filter" data-option-value="*" class="selected">Todos</a></li>
                         <li><a href="#filter" data-option-value=".telas">Telas</a></li>
                         <li><a href="#filter" data-option-value=".trajes">Trajes y Sacos</a></li>
@@ -527,11 +251,11 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
             </div>
             
             <div class="span9" id="gallery">
-            	<div class="row">
-                	<section id="projects">
-                    	<ul id="thumbs">
+              <div class="row">
+                  <section id="projects">
+                      <ul id="thumbs">
 
-				<!-- TELAS -->
+        <!-- TELAS -->
                             <!-- Item Project and Filter Name -->
                             <li class="item-thumbs span3 telas">
                                 <!-- Fancybox - Gallery Enabled - Title - Full Image -->
@@ -622,7 +346,7 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
                             </li>
                                                     
                 <!--CAMISAS-->
-						   <!-- Item Project and Filter Name -->                            
+               <!-- Item Project and Filter Name -->                            
                             <li class="item-thumbs span3 camisas">
                                 <!-- Fancybox - Gallery Enabled - Title - Full Image -->
                                 <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/fatto/full/pezpunte-camisa-full.png">
@@ -644,7 +368,7 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
                                 <img src="_include/img/fatto/thumbs/camisas1-thumb.jpg" >
                             </li>
                           
-                          	<!-- Item Project and Filter Name -->                            
+                            <!-- Item Project and Filter Name -->                            
                             <li class="item-thumbs span3 camisas">
                                 <!-- Fancybox - Gallery Enabled - Title - Full Image -->
                                 <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/fatto/full/camisas2-full.jpg">
@@ -655,7 +379,7 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
                                 <img src="_include/img/fatto/thumbs/camisas2-thumb.jpg" >
                             </li>
 
-							<!-- Item Project and Filter Name -->                            
+              <!-- Item Project and Filter Name -->                            
                             <li class="item-thumbs span3 camisas">
                                 <!-- Fancybox - Gallery Enabled - Title - Full Image -->
                                 <a class="hover-wrap fancybox" data-fancybox-group="gallery"  href="_include/img/fatto/full/camisas3-full.jpg">
@@ -665,11 +389,11 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
                                 <!-- Thumb Image and Description -->
                                 <img src="_include/img/fatto/thumbs/camisas3-thumb.jpg" >
                             </li>
-                        	<!-- End Item Project -->
+                          <!-- End Item Project -->
                         </ul>
                     </section>
                     
-            	</div>
+              </div>
             </div>
         </div>
         <!-- End Portfolio Projects -->
@@ -1203,22 +927,22 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
     
     <!-- Contact Form -->
     <div class="row">
-    	<div class="span9">
-        	<form id="contact-form" class="contact-form" action="#">
-            	<p class="contact-name">
-            		<input id="contact_name" type="text" placeholder="Nombre completo" value="" name="name" />
+      <div class="span9">
+          <form id="contact-form" class="contact-form" action="#">
+              <p class="contact-name">
+                <input id="contact_name" type="text" placeholder="Nombre completo" value="" name="name" />
                 </p>
                 <p class="contact-email">
-                	<input id="contact_email" type="text" placeholder="Direccion de Email" value="" name="email" />
+                  <input id="contact_email" type="text" placeholder="Direccion de Email" value="" name="email" />
                 </p>
                 <p class="contact-phone">
                     <input id="contact_phone" type="text" placeholder="Telefono" value="" name="telefono" />
                 </p>
                 <p class="contact-message">
-                	<textarea id="contact_message" placeholder="Ingrese su mensaje.." name="message" rows="6" cols="40"></textarea>
+                  <textarea id="contact_message" placeholder="Ingrese su mensaje.." name="message" rows="6" cols="40"></textarea>
                 </p>
                 <p class="contact-submit">
-                	<a id="contact-submit" class="submit" href="#">Enviar email</a>
+                  <a id="contact-submit" class="submit" href="#">Enviar email</a>
                 </p>
                 
                 <div id="response">
@@ -1227,8 +951,8 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
         </div>
         
         <div class="span3">
-        	<div class="contact-details">
-        		<h3>Detalles de contacto</h3>
+          <div class="contact-details">
+            <h3>Detalles de contacto</h3>
                 <ul>
                     <li><a href="#">contactos@luigidecarlo.com.ar</a></li>
                     <li>+5411 4813 9239</li>
@@ -1248,8 +972,8 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
 
 <!-- Twitter Feed -->
 <!--<div id="twitter-feed" class="page-alternate">
-	<div class="container">
-    	<div class="row">
+  <div class="container">
+      <div class="row">
             <div class="span12">
                 <div class="follow">
                     <a href="https://twitter.com/Bluxart" title="Follow Me on Twitter" target="_blank"><i class="font-icon-social-twitter"></i></a>
@@ -1264,8 +988,8 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
 
 <!-- Socialize--> 
 <div id="social-area" class="page">
-	<div class="container">
-    	<div class="row">
+  <div class="container">
+      <div class="row">
             <div class="span12">
                 <nav id="social">
                     <ul>
@@ -1281,29 +1005,29 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
 
 <!-- Footer -->
 <footer>
-	<p class="credits">&copy;2016 - Desarrollado por <a href="http://www.dolphin-it.com.ar" title="Desarrollado por Dolphin-it">Dolphin-it</a>
+  <p class="credits">&copy;2016 - Desarrollado por <a href="http://www.dolphin-it.com.ar" title="Desarrollado por Dolphin-it">Dolphin-it</a>
     </p>
 </footer>
 <!-- End Footer -->
 
 <!-- Back To Top -->
 <a id="back-to-top" href="#">
-	<i class="font-icon-arrow-simple-up"></i>
+  <i class="font-icon-arrow-simple-up"></i>
 </a>
 <!-- End Back to Top -->
 
 <!--EJEMPLO DE VIDEO DE LA GALERIA!!
-	<!-- Item Project and Filter Name -->
+  <!-- Item Project and Filter Name -->
                         <!--<li class="item-thumbs span3 video">
-                            	<!-- Fancybox Media - Gallery Enabled - Title - Link to Video -->
-                            <!--	<a class="hover-wrap fancybox-media" data-fancybox-group="video" title="Video Content From Vimeo" href="http://vimeo.com/51460511">
-                                	<span class="overlay-img"></span>
+                              <!-- Fancybox Media - Gallery Enabled - Title - Link to Video -->
+                            <!--  <a class="hover-wrap fancybox-media" data-fancybox-group="video" title="Video Content From Vimeo" href="http://vimeo.com/51460511">
+                                  <span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
                                 <!-- Thumb Image and Description -->
                     <!--            <img src="_include/img/work/thumbs/image-08.jpg" alt="Video">
                             </li>
-                        	<!-- End Item Project                            
+                          <!-- End Item Project                            
 -->
 
 <!-- Js -->
