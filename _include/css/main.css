@@ -139,6 +139,20 @@ textarea::-webkit-input-placeholder {
 }
 
 /* ==================================================
+   Idioma
+================================================== */
+
+#lanEs:hover{
+
+}
+
+#lanEn{
+
+}
+
+
+
+/* ==================================================
    Code and Pre
 ================================================== */
 
@@ -1239,13 +1253,6 @@ footer .credits {
    Preloader
 ================================================== */
 
-#custom-style{
-	top: -20%;
-	position: relative;
-	left: -74%;
-}
-
-
 #jpreOverlay,
 #jSplash {
 	background-color: #2F3238;
@@ -1253,6 +1260,25 @@ footer .credits {
 	width: 100%;
 	height: 100%;
 	z-index: 700;
+}
+
+#slogan{
+	font-size: 28px;
+	font-family: cursive;
+	font-style: italic;
+	color: #BDBDBD;
+	position: absolute;
+    right: -41%;
+}
+
+#logosplash{
+	position: absolute;
+	top: -69%;
+	left: -79%;
+	
+/*	position: relative;
+    right: -63%;
+    vertical-align:50%;*/
 }
 
 #jpreSlide{
@@ -1290,13 +1316,6 @@ footer .credits {
 		-ms-animation: circle 1s infinite forwards;
 		 -o-animation: circle 1s infinite forwards;
 			animation: circle 1s infinite forwards;
-}
-
-#slogan{
-	font-size: 28px;
-	font-family: cursive;
-	font-style: italic;
-	color: #BDBDBD;
 }
 
 #circle {
