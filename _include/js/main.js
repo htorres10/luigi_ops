@@ -88,6 +88,11 @@ BRUSHED.slider = function(){
 		mouse_scrub				:	0
 		
 	});
+
+/* ==================================================
+   Idioma
+================================================== */
+
 	$('ul#menu-idiomas li a#lanEs').css("background", "red");
     $('ul#menu-idiomas li a').click(function(){
 		$('ul#menu-idiomas li a').css("background", "transparent");
