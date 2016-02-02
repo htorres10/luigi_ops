@@ -70,6 +70,7 @@
 
 <body>
 
+
 <!-- This section is for Splash Screen -->
 <div class="ole">
 <section id="jSplash">
@@ -85,7 +86,10 @@
 <!-- Homepage Slider -->
 <div id="home-slider">	
     <div class="overlay"></div>
-
+    <ul id="menu-idiomas">
+        <li><a href="#about" id="lanEs">Español</a></li>
+        <li><a href="#about" id="lanEn">English</a></li>
+    </ul>
     <div class="slider-text">
     	<div id="slidecaption"></div>
     </div>   
@@ -97,30 +101,27 @@
         <a id="nextsection" href="#about"><i class="font-icon-arrow-simple-down"></i></a>
     </div>
 </div>
+
 <!-- End Homepage Slider -->
 
 <!-- Header -->
 <header>
     <div class="sticky-nav">
     	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
-        
         <div id="logo">
         	<a id="goUp" href="#home-slider" title="">Luigi De Carlo</a>
         </div>
-        
         <nav id="menu">
         	<ul id="menu-nav">
             	<!--<li class="current"><a href="#home-slider">Home</a></li>-->
-                <li><a href="#about">Oficio de sastreria</a></li>
-                <li><a href="#work">Fatto a mano</a></li>
-                <li><a href="#zapatos">Zapatos</a></li>
-                <li><a href="#accesorios">Accesorios</a></li>
-                <li><a href="#contact">Contacto</a></li>
-                <li><a href="#" id="lanEn">Ingles</a></li>
+                <li><a href="#about" id="lanOficioSastre">Oficio de sastreria</a></li>
+                <li><a href="#work" id="lanFatto">Fatto a mano</a></li>
+                <li><a href="#zapatos" id="lanZapatos">Zapatos</a></li>
+                <li><a href="#accesorios" id="lanAccesorios">Accesorios</a></li>
+                <li><a href="#contact" id="lanContacto">Contacto</a></li>
 				<!--<li><a href="shortcodes.html" class="external">¡BORRAR!</a></li>-->
             </ul>
         </nav>
-        
     </div>
 </header>
 <!-- End Header -->
@@ -132,9 +133,9 @@
     <div class="row">
         <div class="span12">
             <div class="title-page">
-                <br>
-                <h2 class="title">Oficio de sastreria</h2>
-                <h3 class="title-description">Con más de 65 años de reconocida trayectoria en la city porteña, nuestra sastrería ofrece una confección, única, singular y artesanal. 
+                </br></br>
+                <h2 class="title" id="lanOficioSastreT">Oficio de sastreria</h2>
+                <h3 class="title-description" id="lanOficioSastreDesc">Con más de 65 años de reconocida trayectoria en la city porteña, nuestra sastrería ofrece una confección, única, singular y artesanal. 
 
 Las prendas no sólo están hechas a medida sino pensadas para las necesidades y la forma específica del cuerpo de cada cliente. Cada pieza es artesanal desde el comienzo hasta el fin: un oficio de italianos hecho por italianos.
 
@@ -226,7 +227,7 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
             <div class="span12">
                 <div class="title-page">
                     <br>
-                    <h2 class="title">Fatto a mano</h2>
+                    <h2 class="title" id="lanFattoT">Fatto a mano</h2>
                     <!--<h3 class="title-description">Check Out Our Projects on <a href="#">Dribbble</a>.</h3>-->
                 </div>
             </div>
@@ -408,7 +409,7 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
             <div class="span12">
                 <div class="title-page">
                     <br>
-                    <h2 class="title">Zapatos</h2>
+                    <h2 class="title" id="lanZapatosT">Zapatos</h2>
                     <!--<h3 class="title-description">Check Out Our Projects on <a href="#">Dribbble</a>.</h3>-->
                 </div>
             </div>
@@ -781,7 +782,7 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
             <div class="span12">
                 <div class="title-page">
                     <br>
-                    <h2 class="title">Accesorios</h2>
+                    <h2 class="title" id="lanAccesoriosT">Accesorios</h2>
                     <!--<h3 class="title-description">Check Out Our Projects on <a href="#">Dribbble</a>.</h3>-->
                 </div>
             </div>
@@ -917,8 +918,8 @@ Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo 
         <div class="span12">
             <div class="title-page">
             <br> 
-                <h2 class="title">Contacto</h2>
-                <h3 class="title-description">Consúltanos cualquier inquietud, sobre telas, precios, tiempos y garantías, a través de un e-mail y  rápidamente te contestaremos</h3>
+                <h2 class="title" id="lanContactoT">Contacto</h2>
+                <h3 class="title-description" id="lanContactoDesc">Consúltanos cualquier inquietud, sobre telas, precios, tiempos y garantías, a través de un e-mail y  rápidamente te contestaremos</h3>
             </div>
         </div>
     </div>

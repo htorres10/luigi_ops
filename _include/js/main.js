@@ -88,6 +88,84 @@ BRUSHED.slider = function(){
 		mouse_scrub				:	0
 		
 	});
+	$('ul#menu-idiomas li a#lanEs').css("background", "red");
+    $('ul#menu-idiomas li a').click(function(){
+		$('ul#menu-idiomas li a').css("background", "transparent");
+		if ($(this).attr('id')=='lanEn'){
+			$(this).css("background", "red");
+
+			$('#lanOficioSastre').text('Tayloring');
+			$('#lanFatto').text('Hand made');
+			$('#lanZapatos').text('Shoes');
+			$('#lanAccesorios').text('Accessories');
+			$('#lanContacto').text('Contact');
+			
+			$('.type-work').text('Products');
+			$('[data-option-value="*"]').text('All');
+			$('[data-option-value=".zapatos"]').text('Shoes');
+			$('[data-option-value=".botas"]').text('Boot');
+			$('[data-option-value=".cinturones"]').text('Belts');
+			$('[data-option-value=".bolsos"]').text('Leather bags');
+			$('[data-option-value=".gemelos"]').text('cufflinks');
+			$('[data-option-value=".telas"]').text('fabrics');
+			$('[data-option-value=".trajes"]').text('suits & jackets');
+			$('[data-option-value=".camisas"]').text('dress shirts');
+			
+			$('#lanOficioSastreT').text('Tayloring');
+			$('#lanOficioSastreDesc').text('With over 65 years of proven track record in the port city, our tailoring offers clothing , singular and unique craft . The garments are not only designed but tailored to the specific needs and body shape of each client. Each piece is handcrafted from start to finish : a trade of Italian by Italians. Impossible not to feel at ease and stylish in a suit or in a bag designed just for you . , In which art, tasteful, quality, dedication , professionalism and warmth are combined.');
+			$('#lanFattoT').text('Hand made');
+			$('#lanAccesoriosT').text('Accessories');
+			$('#lanContactoT').text('Contact');
+			$('#lanContactoDesc').text('Ask us any questions on fabrics , prices, times and guarantees, through an e- mail and we will answer quickly');
+			$('#lanZapatosT').text('Shoes');
+						
+			$('#contact_name ').attr('placeholder','Full name');
+			$('#contact_email ').attr('placeholder','Email address');
+			$('#contact_phone ').attr('placeholder','Phone number');
+			$('#contact_message ').attr('placeholder','Message...');
+			$('#contact-submit').text('Send email');
+			$('.contact-details h3').text('Contact details');
+
+			alert('welcome to our English web page');
+		}else if ($(this).attr('id')=='lanEs'){
+			$(this).css("background", "red");
+
+			$('#lanOficioSastre').text('Oficio de sastre');
+			$('#lanFatto').text('Fatto a mano');
+			$('#lanZapatos').text('Zapatos');
+			$('#lanAccesorios').text('Accesorios');
+			$('#lanContacto').text('Contacto');
+			
+			$('.type-work').text('Productos');
+			$('[data-option-value="*"]').text('Todos');
+			$('[data-option-value=".zapatos"]').text('Zapatos');
+			$('[data-option-value=".botas"]').text('Botas');
+			$('[data-option-value=".cinturones"]').text('Cinturones');
+			$('[data-option-value=".bolsos"]').text('Bolsos');
+			$('[data-option-value=".gemelos"]').text('Gemelos');
+			$('[data-option-value=".telas"]').text('Telas');
+			$('[data-option-value=".trajes"]').text('Trajes y sacos');
+			$('[data-option-value=".camisas"]').text('Camisas');
+			
+			$('#lanOficioSastreT').text('Oficio de sastre');
+			$('#lanOficioSastreDesc').text('Con más de 65 años de reconocida trayectoria en la city porteña, nuestra sastrería ofrece una confección, única, singular y artesanal. Las prendas no sólo están hechas a medida sino pensadas para las necesidades y la forma específica del cuerpo de cada cliente. Cada pieza es artesanal desde el comienzo hasta el fin: un oficio de italianos hecho por italianos. Imposible no sentirse a gusto y elegante en un traje o en un saco pensado sólo para Ud., en el que se combinan arte, buen gusto, calidad, dedicación, profesionalismo y calidez.');
+			$('#lanFattoT').text('Fatto a mano');
+			$('#lanAccesoriosT').text('Accesorios');
+			
+			$('#lanContactoT').text('Contacto');
+			$('#lanContactoDesc').text('Consúltanos cualquier inquietud, sobre telas, precios, tiempos y garantías, a través de un e-mail y  rápidamente te contestaremos');
+			$('#lanZapatosT').text('Zapatos');
+			$('.contact-details h3').text('Detalles decontacto');
+
+			$('#contact_name ').attr('placeholder','Nombre completo');
+			$('#contact_email ').attr('placeholder','Direccion de Email');
+			$('#contact_phone ').attr('placeholder','Telefono');
+			$('#contact_message ').attr('placeholder','Ingrese su mensaje..');
+			$('#contact-submit').text('Enviar email');
+			
+			alert('Bienvenido a nuestra web en Español');
+		}
+    });
 
 }
 
@@ -560,11 +638,6 @@ $(document).ready(function(){
 			$(this).css({ 'background-color': '#9EA07F' });	
 	  	};
 	});
-
-	$('ul li a').click(function(e) { 
-    	//alert('hola');
-    	console.log( "You clicked a paragraph!" );
-    });
 
 });
 

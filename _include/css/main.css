@@ -1450,3 +1450,22 @@ footer .credits {
 .span9 .row{
 	background: rgba(107, 106, 106, 0.58);
 }
+
+#menu-idiomas { 
+    float: right;
+    display: block;
+    position: fixed;
+}
+
+#menu-idiomas li { 
+    background: transparent;
+    padding: 10px 20px;
+    margin: 0 3px;
+    float: left;
+    list-style: none;
+    font-size: 20px;
+}
+
+#menu-idiomas li a:hover{
+	background: red;
+}
