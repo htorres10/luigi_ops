@@ -105,6 +105,8 @@ BRUSHED.slider = function(){
 			$('#lanZapatos').text('Shoes');
 			$('#lanAccesorios').text('Accessories');
 			$('#lanContacto').text('Contact');
+			$('#lanPrensa').text('Press Releases');
+			$('#lanHistoria').text('History');
 			
 			$('.type-work').text('Products');
 			$('[data-option-value="*"]').text('All');
@@ -141,7 +143,9 @@ BRUSHED.slider = function(){
 			$('#lanZapatos').text('Zapatos');
 			$('#lanAccesorios').text('Accesorios');
 			$('#lanContacto').text('Contacto');
-			
+			$('#lanPrensa').text('Prensa');
+			$('#lanHistoria').text('Historia');
+
 			$('.type-work').text('Productos');
 			$('[data-option-value="*"]').text('Todos');
 			$('[data-option-value=".zapatos"]').text('Zapatos');
