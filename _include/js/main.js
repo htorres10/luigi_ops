@@ -77,10 +77,11 @@ BRUSHED.slider = function(){
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
-											{image : '_include/img/slider-images/Image01.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
+											{image : '_include/img/slider-images/image01.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
 											{image : '_include/img/slider-images/image03.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
 											{image : '_include/img/slider-images/image04.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image05.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''}    
+											{image : '_include/img/slider-images/image05.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
+											{image : '_include/img/slider-images/image06.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''}    
 									],
 									
 		// Theme Options			   
@@ -131,7 +132,7 @@ BRUSHED.slider = function(){
 			$('#contact-submit').text('Send email');
 			$('.contact-details h3').text('Contact details');
 
-			alert('welcome to our English web page');
+			alert('Welcome to our English web page');
 		}else if ($(this).attr('id')=='lanEs'){
 			$(this).css("background", "red");
 
