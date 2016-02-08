@@ -134,7 +134,6 @@ BRUSHED.slider = function(){
 			$('#contact-submit').text('Send email');
 			$('.contact-details h3').text('Contact details');
 
-			alert('Welcome to our English web page');
 		}else if ($(this).attr('id')=='lanEs'){
 			$(this).css("background", "red");
 
@@ -172,8 +171,6 @@ BRUSHED.slider = function(){
 			$('#contact_phone ').attr('placeholder','Telefono');
 			$('#contact_message ').attr('placeholder','Ingrese su mensaje..');
 			$('#contact-submit').text('Enviar email');
-			
-			alert('Bienvenido a nuestra web en Español');
 		}
     });
 
